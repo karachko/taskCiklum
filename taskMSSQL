@@ -172,7 +172,7 @@ SELECT * FROM CLIENT WHERE C_NameL = 'Petrov' OR C_NameL = 'Ivanov';
 SELECT * FROM [ClIENTSPI] 
 ``
 
-14. Converting into XML from SQL tables
+14. Converting into XML from SQL tables (https://www.sqlshack.com/working-with-xml-data-in-sql-server/)
 ``
 use AdwentureWorksPHARMACY;
 SELECT * FROM PREPARATION
