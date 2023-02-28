@@ -45,28 +45,29 @@ GO
 |smallint  |smallint   |VARCHAR(30)|VARCHAR(30)|VARCHAR(30)|smallint   |C_ID        |PR_ID     |
 
 6. I created tables
+- CREATE TABLE PHARMACY(PH_ID int identity(1,1) primary key, PH_Name VARCHAR(30) NOT NULL);
 
-- CREATE TABLE PHARMACY(PH_ID smallint,  PH_Name VARCHAR(30) NOT NULL, PRIMARY KEY(PH_ID));
 -  CREATE TABLE PREPARATION (
-    PR_ID smallint,
+    PR_ID smallint primary key,
     PHARMACY_ID smallint,
     PR_Name VARCHAR(30) NOT NULL,
-    PRIMARY KEY (PR_ID),
     FOREIGN KEY (PHARMACY_ID) REFERENCES PHARMACY(PH_ID)); 
-- CREATE TABLE CLIENT (C_ID smallint,
+    
+- CREATE TABLE CLIENT ( 
+    C_ID smallint primary key,
     PHARMACY_ID smallint,
     PR_ID smallint,
     PR_Name VARCHAR(30) NOT NULL,
     C_NameF VARCHAR(30) NOT NULL,
     C_NameL VARCHAR(30) NOT NULL,
-    PRIMARY KEY (C_ID),
     FOREIGN KEY (PR_ID) REFERENCES PREPARATION(PR_ID)
     ); 
+    
 7. I filled in tables 
-- INSERT PHARMACY(PH_ID, PH_Name) 
-- VALUES ('1', 'Stay_helphy');
-- INSERT PHARMACY(PH_ID, PH_Name) 
-- VALUES ('2', 'Bless_yourself');
+- INSERT PHARMACY(PH_Name) 
+- VALUES ('Stay_helphy');
+- INSERT PHARMACY(PH_Name) 
+- VALUES ('Bless_yourself');
 
 - INSERT PREPARATION(PHARMACY_ID, PR_ID, PR_Name) 
 - VALUES ('1','101', 'Amizon');
