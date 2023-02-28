@@ -136,21 +136,18 @@ FROM PREPARATION RIGHT JOIN PHARMACY
 ON PREPARATION.PHARMACY_ID = PHARMACY.PH_ID
 ``
 
-7.
-- DDL 
-   - I added a new column with Price (table Preparation , database PHARMNETWORK )
-   - USE PHARMNETWORK
-   - ALTER TABLE PREPARATION
-   - ADD PR_PRICE INT NOT NULL;
-   - (ddl.jpg)![ddl.jpg](https://github.com/karachko/DevOps_online_Chernivtsi_2021Q2/blob/main/m3/ddl.jpg)
-- DML(I deleted the preparation VitaminZinc )
+10. I aplied the modification of tables
+
+   - I added a new column with Price (table Preparation , database AdwentureWorksPHARMACY )
+   - ALTER TABLE PREPARATION 
+     ADD PR_PRICE INT ;
+ 
+   - I deleted the preparation VitaminZinc 
     - DELETE FROM PREPARATION 
     - WHERE PR_Name = 'VitaminZinc';
--DCL
-    -  I allowed GRANT UPDATE to user Newuser
-    - CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
-    - GRANT UPDATE ON PREPARATION TO'newuser'@'localhost;
-   
+    
+11. I aplied the STORED PROCEDURE
+
  
 
 
