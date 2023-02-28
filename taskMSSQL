@@ -45,7 +45,7 @@ GO
 |smallint  |smallint   |VARCHAR(30)|VARCHAR(30)|VARCHAR(30)|smallint   |C_ID        |PR_ID     |
 
 6. I created tables
-- CREATE TABLE PHARMACY(PH_ID int identity(1,1) primary key, PH_Name VARCHAR(30) NOT NULL);
+- CREATE TABLE PHARMACY(PH_ID smallint identity(1,1) primary key, PH_Name VARCHAR(30) NOT NULL);
 
 -  CREATE TABLE PREPARATION (
     PR_ID smallint primary key,
@@ -145,7 +145,7 @@ ON PREPARATION.PHARMACY_ID = PHARMACY.PH_ID
  
    - I deleted the preparation VitaminZinc 
     - DELETE FROM PREPARATION 
-    - WHERE PR_Name = 'VitaminZinc';
+      WHERE PR_Name = 'VitaminZinc';
     
 12. I aplied the STORED PROCEDURE (https://www.programiz.com/sql/stored-procedures#:~:text=SQL%20Stored%20Procedures%201%20Creating%20a%20Procedure%20We,Multiple%20Parameterized%20Procedures%20...%205%20Drop%20Procedure%20)
 
