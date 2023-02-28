@@ -62,7 +62,7 @@ GO
     PRIMARY KEY (C_ID),
     FOREIGN KEY (PR_ID) REFERENCES PREPARATION(PR_ID)
     ); 
-5. I filled in tables 
+7. I filled in tables 
 - INSERT PHARMACY(PH_ID, PH_Name) 
 - VALUES ('1', 'Stay_helphy');
 - INSERT PHARMACY(PH_ID, PH_Name) 
@@ -93,7 +93,7 @@ GO
 - INSERT CLIENT(PHARMACY_ID, PR_Name, C_ID, C_NameF, C_NameL) 
 - VALUES ('2', 'Amizon', '3462', 'Petro', 'Petrov');
 
-6.  I constructed and executed SELECT
+8.  I constructed and executed SELECT
 - SELECT * FROM CLIENT WHERE C_NameL = 'Petrov';
 
 - SELECT * FROM PREPARATION WHERE PHARMACY_ID = 1
@@ -102,6 +102,14 @@ ORDER BY PR_Name;
 - SELECT * FROM CLIENT WHERE RTRIM(C_NameL) LIKE '%Petro%';
 
 - SELECT * FROM CLIENT WHERE RTRIM(C_NameL) NOT LIKE '%Petro%';
+
+- SELECT * FROM CLIENT WHERE C_NameL = 'Petrov' OR C_NameL = 'Ivanov';
+
+9. I aplied SQL functions (http://2sql.ru/novosti/sql-count/)
+- SELECT COUNT(*) FROM CLIENT WHERE C_NameL = 'Petrov';
+- SELECT AVG(C_ID) FROM CLIENT;
+- SELECT MIN(C_ID) FROM CLIENT;
+- SELECT MAX(C_ID) FROM CLIENT;
 
 7.
 - DDL 
