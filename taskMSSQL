@@ -136,7 +136,7 @@ FROM PREPARATION RIGHT JOIN PHARMACY
 ON PREPARATION.PHARMACY_ID = PHARMACY.PH_ID
 ``
 
-10. I aplied the modification of tables
+11. I aplied the modification of tables
 
    - I added a new column with Price (table Preparation , database AdwentureWorksPHARMACY )
    - ALTER TABLE PREPARATION 
@@ -146,7 +146,7 @@ ON PREPARATION.PHARMACY_ID = PHARMACY.PH_ID
     - DELETE FROM PREPARATION 
     - WHERE PR_Name = 'VitaminZinc';
     
-11. I aplied the STORED PROCEDURE (https://www.programiz.com/sql/stored-procedures#:~:text=SQL%20Stored%20Procedures%201%20Creating%20a%20Procedure%20We,Multiple%20Parameterized%20Procedures%20...%205%20Drop%20Procedure%20)
+12. I aplied the STORED PROCEDURE (https://www.programiz.com/sql/stored-procedures#:~:text=SQL%20Stored%20Procedures%201%20Creating%20a%20Procedure%20We,Multiple%20Parameterized%20Procedures%20...%205%20Drop%20Procedure%20)
 
 -create procedure
 ``
@@ -159,7 +159,7 @@ ORDER BY PR_Name DESC
 - ececute procedure
 EXEC LAST_PREPARATION;
 
-12. I aplied the VIEWS (https://www.w3schools.com/SQL/sql_view.asp)
+13. I aplied the VIEWS (https://www.w3schools.com/SQL/sql_view.asp)
 
 -create views
 
@@ -171,3 +171,11 @@ SELECT * FROM CLIENT WHERE C_NameL = 'Petrov' OR C_NameL = 'Ivanov';
 ``
 SELECT * FROM [ClIENTSPI] 
 ``
+
+14. Converting into XML from SQL tables
+``
+use AdwentureWorksPHARMACY;
+SELECT * FROM PREPARATION
+FOR XML PATH ('Preparation'), ROOT('Preparations')
+``
+
