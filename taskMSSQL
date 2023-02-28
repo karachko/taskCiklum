@@ -146,8 +146,18 @@ ON PREPARATION.PHARMACY_ID = PHARMACY.PH_ID
     - DELETE FROM PREPARATION 
     - WHERE PR_Name = 'VitaminZinc';
     
-11. I aplied the STORED PROCEDURE
+11. I aplied the STORED PROCEDURE (https://www.programiz.com/sql/stored-procedures#:~:text=SQL%20Stored%20Procedures%201%20Creating%20a%20Procedure%20We,Multiple%20Parameterized%20Procedures%20...%205%20Drop%20Procedure%20)
 
- 
+-create procedure
+``
+ CREATE PROCEDURE LAST_PREPARATION AS
+SELECT TOP 1 PR_Name
+FROM PREPARATION
+ORDER BY PR_Name DESC
+``
 
+- ececute procedure
+EXEC LAST_PREPARATION;
+
+12.
 
