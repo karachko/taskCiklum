@@ -159,5 +159,15 @@ ORDER BY PR_Name DESC
 - ececute procedure
 EXEC LAST_PREPARATION;
 
-12.
+12. I aplied the VIEWS (https://www.w3schools.com/SQL/sql_view.asp)
 
+-create views
+
+``
+CREATE VIEW [ClIENTSPI] AS
+SELECT * FROM CLIENT WHERE C_NameL = 'Petrov' OR C_NameL = 'Ivanov';
+``
+- select date from created virtual table
+``
+SELECT * FROM [ClIENTSPI] 
+``
